@@ -1,0 +1,198 @@
+<!doctype html><html lang="es" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Investigación · PelotonSync</title><meta name="description" content="Cómo funciona un ciclista profesional, roles del staff, tipos de corredor, fichas, flujos de información y pruebas de usabilidad simuladas."><meta name="theme-color" content="#090B08">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;600&family=Unbounded:wght@300;700&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('ps-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body><div class="progress"></div><nav class="nav" aria-label="Principal"><a class="brand" href="/"><svg viewBox="4 4 136 64" aria-hidden="true"><path class="ring1" d="M36 62C50.36 62 62 50.36 62 36S50.36 10 36 10 10 21.64 10 36s11.64 26 26 26Z" fill="none" stroke="#4F534E" stroke-width="9"/><path d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="var(--bg)" stroke-width="15" class="ring2 cut"/><path class="ring2" d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="#A9ADA6" stroke-width="9"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="var(--bg)" stroke-width="15"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="#4F534E" stroke-width="9"/><circle class="ball" cx="100" cy="36" r="28" fill="#CCFF00" stroke="var(--bg)" stroke-width="6"/></svg><span>Peloton<b>Sync</b></span></a><ul><li><a href="/">Inicio</a></li><li><a href="/marca">Manual de marca</a></li><li><a href="/investigacion" aria-current="page">Investigación</a></li><li><a href="/wireframe">Wireframe</a></li><li><a href="/prototipo">Prototipo</a></li></ul>
+<button class="theme-btn" type="button" aria-label="Cambiar tema"></button><button class="theme-btn menu-btn" type="button" aria-label="Menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button></nav><main>
+<section style="padding-top:170px">
+  <div class="wrap">
+    <p class="eyebrow rv">Investigación</p>
+    <h1 class="rv d1">Antes de diseñar,<br><b>entender el pelotón.</b></h1>
+    <p class="lead rv d2" style="margin-top:24px">Este levantamiento revisó literatura científica, tesis y prensa especializada para entender cómo vive, entrena y se coordina un ciclista profesional. Cada dato lleva su etiqueta para que se sepa de dónde viene.</p>
+    <p class="rv d3" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:22px"><span class="tag f">F · científica u oficial</span><span class="tag p">P · prensa o equipo</span><span class="tag e">E · estimación</span><span class="tag b">B · contexto del proyecto</span><span class="tag h">H · hipótesis sin validar</span></p>
+  </div>
+</section>
+
+<section id="rutina" style="padding-top:40px">
+  <div class="wrap grid g2" style="gap:60px">
+    <div>
+      <p class="eyebrow rv">01 · El día a día</p>
+      <h2 class="rv d1">Casi todo el año,<br><b>solo en casa.</b></h2>
+      <p class="rv d2">El tiempo con el equipo se concentra en las concentraciones y en las carreras. En casa no hay mecánicos ni masajistas, así que lo que pasa allí (comidas, molestias, sueño) no lo ve nadie del staff en tiempo real. <span class="tag p">P</span><sup class="ref"><a href="#r1">1</a></sup></p>
+      <div class="grid g2" style="margin-top:30px">
+        <div class="card rv"><div class="led" style="font-size:42px">8–9 h</div><p>de sueño más una siesta de 20–30 min. Es la principal herramienta de recuperación. <span class="tag p">P</span><sup class="ref"><a href="#r1">1</a></sup></p></div>
+        <div class="card rv d1"><div class="led" style="font-size:42px">60 min</div><p>de franja diaria reportada en ADAMS para un posible control antidopaje. <span class="tag f">F</span><sup class="ref"><a href="#r2">2</a></sup></p></div>
+        <div class="card rv d2"><div class="led" style="font-size:42px">2×</div><p>sesiones de gimnasio por semana en pretemporada. <span class="tag p">P</span><sup class="ref"><a href="#r1">1</a></sup></p></div>
+        <div class="card rv d3"><div class="led" style="font-size:42px">~100 h</div><p>dura el Tour de Francia; el Mundial contrarreloj, 1 h. <span class="tag f">F</span><sup class="ref"><a href="#r3">3</a></sup></p></div>
+      </div>
+    </div>
+    <div class="rv d2">
+      <p class="mono" style="margin-bottom:20px">Un día en concentración <span class="tag p">P</span><sup class="ref"><a href="#r4">4</a></sup></p>
+      <div class="day">
+        <div class="slot"><b>Mañana</b><p>Core o yoga, desayuno y fotos con patrocinadores.</p></div>
+        <div class="slot"><b>Bici · ~4 h</b><p>Salida de base con subidas a intensidad específica.</p></div>
+        <div class="slot"><b>Tarde</b><p>Almuerzo y ajuste de posición de contrarreloj.</p></div>
+        <div class="slot"><b>Equipo</b><p>Prensa, masaje y reunión con los directores.</p></div>
+        <div class="slot" style="padding-bottom:0"><b>Noche</b><p>Dormir. Si algo dolió hoy, se cuenta por chat o de palabra, y no queda en ningún registro.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:70px">
+    <h3 class="rv">Lo que pide una carrera</h3>
+    <div class="grid g3" style="margin-top:20px">
+      <div class="glow stat rv" style="--aura:rgba(76,141,255,.45)"><div class="num"><span data-count="210">0</span><small> W</small></div><h4>media en etapas llanas</h4><p>Intensidad media baja pero muy intermitente. <span class="tag f">F</span><sup class="ref"><a href="#r3">3</a></sup></p></div>
+      <div class="glow stat rv d1" style="--aura:rgba(255,155,47,.45)"><div class="num"><span data-count="270">0</span><small> W</small></div><h4>media en alta montaña</h4><p>Muchas horas en subida y esfuerzos repetidos. <span class="tag f">F</span><sup class="ref"><a href="#r3">3</a></sup></p></div>
+      <div class="glow stat rv d2" style="--aura:rgba(240,68,46,.45)"><div class="num"><span data-count="32.3">0</span><small> MJ</small></div><h4>gasto diario en el Giro</h4><p>Unas 7.700 kcal, 4,4 veces el metabolismo basal. <span class="tag f">F</span><sup class="ref"><a href="#r5">5</a></sup></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="staff">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">02 · El equipo técnico</p>
+      <h2 class="rv d1">De 50 a 100 personas<br><b>detrás de cada ciclista.</b></h2>
+      <p class="lead rv d2">Cada rol produce y consume datos distintos. Ese es el origen de la fragmentación. <span class="tag p">P</span><sup class="ref"><a href="#r6">6</a></sup></p>
+    </div>
+    <div class="grid g5" id="staffGrid"></div>
+    <div class="grid g2" style="margin-top:40px;gap:40px;align-items:start">
+      <div class="card rv">
+        <p class="mono">Ejemplo real · UAE Team Emirates <span class="tag p">P</span><sup class="ref"><a href="#r7">7</a></sup></p>
+        <div id="uae" style="margin-top:16px"></div>
+      </div>
+      <div class="rv d1">
+        <h3>Ni los mejores tienen un solo sistema</h3>
+        <p>Decathlon CMA CGM usa TrainingPeaks para que entrenadores, nutricionistas, médicos y fisios trabajen sobre los mismos datos. Visma usa Smartbase para los datos y FoodCoach para la nutrición. <span class="tag p">P</span><sup class="ref"><a href="#r8">8</a></sup></p>
+        <p style="margin-top:12px">El papel del director deportivo dentro del equipo de rendimiento es poco claro y depende mucho de la comunicación. <span class="tag f">F*</span><sup class="ref"><a href="#r9">9</a></sup></p>
+        <p class="callout" style="margin-top:18px">Conclusión: aun en los equipos de punta los datos viven en varios sistemas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tipos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">03 · Tipos de corredor</p>
+      <h2 class="rv d1">Cada cuerpo,<br><b>una métrica que manda.</b></h2>
+      <p class="lead rv d2">La especialidad depende del morfotipo. Los escaladores son más livianos y rinden por potencia relativa al peso; los contrarrelojistas, por potencia absoluta. <span class="tag f">F</span><sup class="ref"><a href="#r10">10</a></sup><sup class="ref"><a href="#r11">11</a></sup></p>
+    </div>
+    <div class="types-ui">
+      <div class="list rv" id="typeList"></div>
+      <div class="glow rv d1" id="typeCard" style="padding:30px;--aura:rgba(204,255,0,.3);min-height:420px"></div>
+    </div>
+    <div class="card rv" style="margin-top:30px">
+      <p class="mono">Escala orientativa de W/kg en 20 min <span class="tag e">E</span><sup class="ref"><a href="#r12">12</a></sup></p>
+      <div id="wkg" style="margin-top:14px"></div>
+      <p style="font-size:14px">La resistencia a la fatiga, es decir la potencia que se mantiene después de 1.000–3.000 kJ, separa a los profesionales de los sub-23 y a los líderes de los gregarios. <span class="tag f">F</span><sup class="ref"><a href="#r13">13</a></sup></p>
+    </div>
+  </div>
+</section>
+
+<section id="fichas">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">04 · Fichas técnicas</p>
+      <h2 class="rv d1">Perfiles reales,<br><b>volteables.</b></h2>
+      <p class="lead rv d2">Toca una ficha para ver su detalle. Casi ningún ciclista publica su potencia real, así que esas cifras son estimaciones de terceros. Se usan ilustraciones propias en lugar de fotos de los atletas.</p>
+    </div>
+    <div class="fichas" id="fichaGrid"></div>
+  </div>
+</section>
+
+<section id="flujos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">05 · Flujos de información</p>
+      <h2 class="rv d1">Siete canales<br><b>que no se hablan.</b></h2>
+      <p class="lead rv d2">Así circulan hoy los datos de un ciclista, y así circularían con un registro único. Cambia la vista.</p>
+    </div>
+    <div class="toggle-row rv"><div class="seg"><button class="on" data-flow="0">Hoy</button><button data-flow="1">Propuesto</button></div></div>
+    <div class="card rv" style="padding:20px"><svg class="flow-svg" id="flowSvg" viewBox="0 0 1100 560" role="img" aria-label="Diagrama de flujo de datos"></svg></div>
+    <div class="grid g2" style="margin-top:20px" id="flowNotes"></div>
+  </div>
+</section>
+
+<section id="problema">
+  <div class="wrap">
+    <p class="eyebrow rv">06 · Problema reformulado</p>
+    <h2 class="rv d1">No falta información.<br><b>Falta integrarla a tiempo.</b></h2>
+    <div class="glow rv d2" style="padding:clamp(26px,4vw,50px);--aura:rgba(240,68,46,.3);margin-top:20px">
+      <p style="font-size:clamp(17px,1.5vw,20px);color:rgba(243,241,234,.86)">Los ciclistas de ruta generan a diario datos de rendimiento, bienestar, nutrición, salud y logística que se guardan en sistemas aislados, cada uno de un miembro distinto del staff. Muchos ni siquiera se registran cuando entrenan solos en casa. Como nadie los integra:</p>
+      <div class="grid g2" style="margin-top:22px">
+        <div><span class="led" style="font-size:30px">01</span><p>El staff no puede cruzar a tiempo la carga externa (potencia) con la respuesta interna (fatiga, ánimo, dolor, sueño, energía), que es donde nacen el sobreentrenamiento, el déficit energético y el agotamiento.</p></div>
+        <div><span class="led" style="font-size:30px">02</span><p>El ciclista carga con la tarea de reenviar, duplicar y recordar información en sus horas de descanso.</p></div>
+        <div><span class="led" style="font-size:30px">03</span><p>El historial médico, de medicación y antidopaje queda sin trazabilidad, y eso es un riesgo legal ante un control.</p></div>
+        <div><span class="led" style="font-size:30px">04</span><p>El historial se pierde cada vez que el ciclista cambia de equipo.</p></div>
+      </div>
+    </div>
+    <h3 class="rv" style="margin:70px 0 20px">Cómo responde PelotonSync</h3>
+    <div class="grid g3" id="solGrid"></div>
+    <p class="callout rv" style="margin-top:24px">TrainingPeaks cubre el entrenamiento, FoodCoach la nutrición y ADAMS el antidopaje. Ninguno cruza los cinco dominios ni hace al ciclista dueño de su dato. <span class="tag h">H · falta un benchmark formal</span></p>
+    <p class="callout rv" style="margin-top:12px;border-color:var(--z4)">Pendiente de verificar: las cifras del brief inicial (más del 70 % de cuerpos técnicos con hojas de cálculo; 30–40 % de atletas con estancamiento o sobreentrenamiento) no se encontraron en las fuentes citadas (Gleeson 2006, Impellizzeri 2020, Halson 2014). Por eso esta web no las usa como dato.</p>
+  </div>
+</section>
+
+<section id="arquetipo">
+  <div class="wrap grid g2" style="gap:50px;align-items:center">
+    <div class="glow rv" style="padding:20px;--aura:rgba(240,68,46,.45)"><img src="assets/illus/de-pie.webp" alt="Ilustración de ciclista de pie junto a su bici" style="width:100%;border-radius:20px"></div>
+    <div>
+      <p class="eyebrow rv">07 · Arquetipo negativo</p>
+      <h2 class="rv d1">El ciclista<br><b>agotado.</b></h2>
+      <p class="rv d2">Referente: Tom Dumoulin. Ganó el Giro 2017, paró en 2021 por la presión de rendir y se retiró en 2022 diciendo que "el tanque está vacío". <span class="tag p">P</span><sup class="ref"><a href="#r14">14</a></sup></p>
+      <p class="rv d3" style="margin-top:12px">Un estudio con 13 exciclistas profesionales encontró cuatro temas: inseguridad contractual, presión por mantener un peso bajo, poco apoyo en salud mental y ninguna ruta de retiro. <span class="tag f">F</span><sup class="ref"><a href="#r15">15</a></sup> En atletas de élite, un 34 % presenta síntomas de depresión o ansiedad. <span class="tag f">F</span><sup class="ref"><a href="#r16">16</a></sup></p>
+      <p class="callout rv d4" style="margin-top:18px">Para el diseño: el desgaste no aparece en una sola métrica, sino en señales sueltas que nadie junta a tiempo. <span class="tag h">H</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="pruebas">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">08 · Pruebas rápidas de usabilidad</p>
+      <h2 class="rv d1">15 recorridos<br><b>por el prototipo.</b></h2>
+      <p class="lead rv d2">Tres tareas: hacer el check-in de la mañana, encontrar la ruta del día y sus alertas, y revisar un resultado de carrera o un medicamento.</p>
+      <p class="callout rv d3" style="margin-top:18px"><b>Método:</b> evaluación con usuarios sintéticos (recorrido cognitivo). Son 15 participantes ficticios armados con los perfiles de esta investigación: tipo de corredor, nivel y edad. Sus testimonios son simulados, no entrevistas reales, y sirven para formular hipótesis que luego se validarán con 5 usuarios reales. <span class="tag h">H</span><sup class="ref"><a href="#r17">17</a></sup></p>
+    </div>
+    <div class="tests-filter rv" id="testFilter"></div>
+    <div class="tests" id="tests"></div>
+    <h3 class="rv" style="margin:60px 0 10px">Síntesis</h3>
+    <div class="rv" id="synth"></div>
+  </div>
+</section>
+
+<section id="fuentes" style="padding-top:30px">
+  <div class="wrap">
+    <details class="sources" open>
+      <summary>Fuentes de esta página</summary>
+      <ol>
+        <li id="r1">Cycling Weekly (Harry Tanfield, rutina WorldTour); diario de Baillifard (equipo de desarrollo BMC); reportajes sobre sueño y fuerza en equipos WorldTour. <span class="tag p">P</span></li>
+        <li id="r2">World Anti-Doping Agency. International Standard for Testing and Investigations: whereabouts y franja diaria de 60 minutos, gestionados en ADAMS. <a href="https://www.wada-ama.org/en/athletes-support-personnel/adams" target="_blank" rel="noopener">wada-ama.org</a></li>
+        <li id="r3">Mujika, I., &amp; Padilla, S. (2001). Physiological and performance characteristics of male professional road cyclists. <i>Sports Medicine, 31</i>(7), 479–487. <a href="https://doi.org/10.2165/00007256-200131070-00003" target="_blank" rel="noopener">doi:10.2165/00007256-200131070-00003</a></li>
+        <li id="r4">Canyon//SRAM vía Zwift: día tipo en concentración. <span class="tag p">P</span></li>
+        <li id="r5">Plasqui, G., et al. (2019). Energy expenditure during extreme endurance exercise: The Giro d'Italia. <i>Med Sci Sports Exerc</i>. <a href="https://pubmed.ncbi.nlm.nih.gov/30363009/" target="_blank" rel="noopener">PubMed 30363009</a> · Van Hooren, B., et al. (2023). <i>Scand J Med Sci Sports, 33</i>(4). <a href="https://doi.org/10.1111/sms.14271" target="_blank" rel="noopener">doi:10.1111/sms.14271</a></li>
+        <li id="r6">Prensa especializada sobre tamaño del staff y presupuesto de los WorldTeams (≈32 M€ de media). <span class="tag p">P</span></li>
+        <li id="r7">Bikerumor: composición del staff de UAE Team Emirates. <span class="tag p">P</span></li>
+        <li id="r8">TrainingPeaks (caso Decathlon CMA CGM); Team Visma | Lease a Bike (FoodCoach, Smartbase). <span class="tag p">P</span></li>
+        <li id="r9">Martin, J. (2023). Understanding the demands of the coach athlete relationship within professional cycling: the director sportif. <i>SportRχiv</i> (preprint, sin revisión por pares). <a href="https://sportrxiv.org" target="_blank" rel="noopener">sportrxiv.org</a></li>
+        <li id="r10">Padilla, S., Mujika, I., Cuesta, G., &amp; Goiriena, J. J. (1999). Level ground and uphill cycling ability in professional road cycling. <i>Med Sci Sports Exerc, 31</i>(6), 878–885. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Level+ground+and+uphill+cycling+ability+in+professional+road+cycling" target="_blank" rel="noopener">PubMed</a></li>
+        <li id="r11">Lucía, A., Hoyos, J., &amp; Chicharro, J. L. (2000). Physiological response to professional road cycling: climbers vs. time trialists. <i>Int J Sports Med, 21</i>(7), 505–512. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Physiological+response+to+professional+road+cycling+climbers+vs+time+trialists" target="_blank" rel="noopener">PubMed</a> · Sallet, P., et al. (2006). <i>J Sports Med Phys Fitness, 46</i>(3), 361–365.</li>
+        <li id="r12">Escalas divulgativas de W/kg (orientativas, no científicas); Muriel Otegui, X. (2023). <i>Aplicabilidad del perfil de potencia máximo en ciclismo profesional</i> [Tesis doctoral, Universidad de Murcia].</li>
+        <li id="r13">Leo, P., Spragg, J., Mujika, I., et al. (2021). Power profiling, workload characteristics, and race performance of U23 and professional cyclists during the multistage race Tour of the Alps. <i>IJSPP</i>. <a href="https://doi.org/10.1123/ijspp.2020-0381" target="_blank" rel="noopener">doi:10.1123/ijspp.2020-0381</a></li>
+        <li id="r14">Cycling Weekly y Cyclingnews: declaraciones de Tom Dumoulin (2021–2022). <span class="tag p">P</span></li>
+        <li id="r15">Smith, A., Grana, J., Hachen, S., Schollerer, E., Buadze, A., &amp; Liebrenz, M. (2026). Mental health experiences in men's elite-level cycling: a qualitative study of retired professional riders. <i>European Psychiatry</i>. <a href="https://doi.org/10.1192/j.eurpsy.2026.11514" target="_blank" rel="noopener">doi:10.1192/j.eurpsy.2026.11514</a></li>
+        <li id="r16">Gouttebarge, V., et al. (2019). Occurrence of mental health symptoms and disorders in current and former elite athletes: a systematic review and meta-analysis. <i>British Journal of Sports Medicine, 53</i>(11), 700–706. <a href="https://doi.org/10.1136/bjsports-2019-100671" target="_blank" rel="noopener">doi:10.1136/bjsports-2019-100671</a></li>
+        <li id="r17">Nielsen Norman Group. Cognitive walkthroughs. <a href="https://www.nngroup.com/articles/cognitive-walkthroughs/" target="_blank" rel="noopener">nngroup.com</a> · Nielsen, J. (2000). Why You Only Need to Test with 5 Users. <a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/" target="_blank" rel="noopener">nngroup.com</a></li>
+        <li>Fichas: ProCyclingStats, Bora-hansgrohe, GCN, Rouleur, BikeRadar, Tour-Magazin, Velo, INSCYD, <i>Journal of Science and Cycling</i> (Berg), Team Visma. Keay, N., et al. (2019). <i>BMJ Open SEM, 5</i>(1), e000523. <a href="https://doi.org/10.1136/bmjsem-2019-000523" target="_blank" rel="noopener">doi:10.1136/bmjsem-2019-000523</a></li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<script src="investigacion.js"></script>
+</main><footer><div class="wrap"><div class="cols"><div><a class="brand" href="/" style="display:flex;gap:10px;align-items:center;text-decoration:none;font-family:var(--f-display);font-weight:700"><svg width="54" height="28" viewBox="4 4 136 64" aria-hidden="true"><path class="ring1" d="M36 62C50.36 62 62 50.36 62 36S50.36 10 36 10 10 21.64 10 36s11.64 26 26 26Z" fill="none" stroke="#4F534E" stroke-width="9"/><path d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="var(--bg)" stroke-width="15" class="ring2 cut"/><path class="ring2" d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="#A9ADA6" stroke-width="9"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="var(--bg)" stroke-width="15"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="#4F534E" stroke-width="9"/><circle class="ball" cx="100" cy="36" r="28" fill="#CCFF00" stroke="var(--bg)" stroke-width="6"/></svg><span>Peloton<b class="volt">Sync</b></span></a>
+<p style="margin-top:14px;max-width:460px">Proyecto de práctica: propuesta de innovación y prototipo navegable UX/UI de alta fidelidad. Desarrollado en el entorno de SAHG SAS y Higuita Monster, con Sergio Higuita como caso de estudio. Entrega: 16 de noviembre de 2026.</p></div>
+<div><p class="mono" style="margin-bottom:10px">Cómo leer las fuentes</p><p style="display:flex;flex-wrap:wrap;gap:6px;max-width:420px"><span class="tag f">F · científica u oficial</span><span class="tag p">P · prensa o equipo</span><span class="tag e">E · estimación</span><span class="tag b">B · contexto del proyecto</span><span class="tag h">H · hipótesis sin validar</span></p></div></div>
+<p class="mono" style="margin-top:40px">Ilustraciones, pantallas y personaje Grega: diseño propio del proyecto. Cifras de la app: datos de ejemplo. Las pruebas de usabilidad son simuladas.</p></div></footer></body></html>

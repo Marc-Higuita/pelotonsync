@@ -1,0 +1,75 @@
+<!--Wireframe · PelotonSync|Wireframes en grises, mapa de interacción de 53 pantallas y diagramas de flujo animados del prototipo PelotonSync.-->
+<section style="padding-top:170px">
+  <div class="wrap">
+    <p class="eyebrow rv">Wireframe</p>
+    <h1 class="rv d1">La estructura<br><b>antes del color.</b></h1>
+    <p class="lead rv d2" style="margin-top:24px">53 pantallas en grises, con la misma navegación del prototipo final. Las X marcan dónde irá una ilustración. Sirven para probar si el recorrido funciona sin que el color y las ilustraciones distraigan.</p>
+    <div class="rv d3" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px">
+      <a class="btn" target="_blank" rel="noopener" href="https://www.figma.com/proto/eOCPJYLIfA6pfTA1UvSpxY/PelotonSync-%E2%80%94-Prototipo?node-id=119-18079&p=f&t=lDr2trxhtASS2ew2-1&scaling=min-zoom&content-scaling=fixed&page-id=108%3A345&starting-point-node-id=119%3A18079&show-proto-sidebar=1">Abrir wireframe navegable <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      <a class="btn ghost" href="#mapa">Ver el mapa de interacción</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px;overflow:hidden">
+  <div class="strip wf-strip rv">
+    <figure><img src="assets/wf/inicio.webp" alt="Wireframe de Inicio"><figcaption class="mono" style="text-align:center;margin-top:10px">05 · Inicio</figcaption></figure>
+    <figure><img src="assets/wf/checkin.webp" alt="Wireframe del check-in"><figcaption class="mono" style="text-align:center;margin-top:10px">06 · Check-in</figcaption></figure>
+    <figure><img src="assets/wf/ruta.webp" alt="Wireframe de la ruta del día"><figcaption class="mono" style="text-align:center;margin-top:10px">08 · Ruta del día</figcaption></figure>
+    <figure><img src="assets/wf/nutricion.webp" alt="Wireframe de nutrición"><figcaption class="mono" style="text-align:center;margin-top:10px">09 · Nutrición</figcaption></figure>
+    <figure><img src="assets/wf/rendimiento.webp" alt="Wireframe de rendimiento"><figcaption class="mono" style="text-align:center;margin-top:10px">11 · Rendimiento</figcaption></figure>
+    <figure><img src="assets/wf/agenda.webp" alt="Wireframe de agenda"><figcaption class="mono" style="text-align:center;margin-top:10px">13 · Agenda</figcaption></figure>
+    <figure><img src="assets/wf/grega.webp" alt="Wireframe del chat con Grega"><figcaption class="mono" style="text-align:center;margin-top:10px">14 · Grega</figcaption></figure>
+    <figure><img src="assets/wf/equipo.webp" alt="Wireframe del panel del equipo"><figcaption class="mono" style="text-align:center;margin-top:10px">16 · Equipo</figcaption></figure>
+  </div>
+  <div class="wrap grid g3" style="margin-top:40px">
+    <div class="card rv"><h3>Tres roles, tres entradas</h3><p>Después del acceso se elige rol. El ciclista entra a sus cuatro pilares, el equipo técnico a un panel de semáforo y el médico a su espacio clínico exclusivo.</p></div>
+    <div class="card rv d1"><h3>Un toque al centro</h3><p>Inicio está en el centro de la barra y cada pilar está a un toque. La ley de Fitts dice que un objetivo grande y cercano se alcanza más rápido. <span class="tag f">F</span><sup class="ref"><a href="#w1">1</a></sup></p></div>
+    <div class="card rv d2"><h3>Grega siempre a mano</h3><p>El botón flotante de Grega aparece en todas las pantallas del ciclista. Desde el chat, la emergencia está a un toque. <span class="tag h">H</span></p></div>
+  </div>
+</section>
+
+<section id="mapa">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Mapa de interacción</p>
+      <h2 class="rv d1">Todas las pantallas,<br><b>conectadas.</b></h2>
+      <p class="lead rv d2">Pasa el cursor sobre una pantalla para ver con cuáles se conecta. Los colores son las auras de cada pilar.</p>
+    </div>
+    <div class="map-wrap rv"><svg id="map" viewBox="0 0 1400 900" role="img" aria-label="Mapa de interacción de la app"></svg></div>
+    <div class="legend"><span><i style="background:#9A9C94"></i>Entrada</span><span><i style="background:#3FC8E4"></i>Ruta</span><span><i style="background:#CCFF00"></i>Registro y nutrición</span><span><i style="background:#FF6A2B"></i>Rendimiento</span><span><i style="background:#8E6BFF"></i>Agenda y Grega</span><span><i style="background:#5BD68A"></i>Equipo técnico</span><span><i style="background:#F0442E"></i>Médico</span></div>
+  </div>
+</section>
+
+<section id="flujo">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Diagrama de flujo</p>
+      <h2 class="rv d1">Tres tareas,<br><b>paso a paso.</b></h2>
+      <p class="lead rv d2">Son las tareas de las pruebas de usabilidad. Elige una y mira cómo viaja el dato, del ciclista al equipo.</p>
+    </div>
+    <div class="toggle-row rv"><div class="seg" id="flowTabs"><button class="on" data-f="0">Check-in de la mañana</button><button data-f="1">Ruta y alertas</button><button data-f="2">Medicamento</button></div></div>
+    <div class="card rv" style="padding:20px;overflow-x:auto"><svg id="uflow" viewBox="0 0 1200 380" style="min-width:900px;width:100%;height:auto" role="img" aria-label="Diagrama de flujo de la tarea"></svg></div>
+    <ol class="steps" id="flowSteps" style="margin-top:30px"></ol>
+  </div>
+</section>
+
+<section id="embed">
+  <div class="wrap">
+    <p class="eyebrow rv">Pruébalo</p>
+    <h2 class="rv d1">Wireframe<br><b>navegable.</b></h2>
+    <div class="embed rv d2" style="margin-top:20px"><iframe loading="lazy" title="Wireframe navegable de PelotonSync en Figma" allowfullscreen src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FeOCPJYLIfA6pfTA1UvSpxY%2FPelotonSync-%25E2%2580%2594-Prototipo%3Fnode-id%3D119-18079%26p%3Df%26t%3DlDr2trxhtASS2ew2-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26page-id%3D108%253A345%26starting-point-node-id%3D119%253A18079%26show-proto-sidebar%3D1"></iframe></div>
+    <p class="mono" style="margin-top:12px">Si no carga, ábrelo en Figma con el botón de arriba. El archivo debe estar compartido como "cualquiera con el enlace puede ver".</p>
+    <details class="sources">
+      <summary>Fuentes de esta página</summary>
+      <ol>
+        <li id="w1">Fitts, P. M. (1954). The information capacity of the human motor system in controlling the amplitude of movement. <i>Journal of Experimental Psychology, 47</i>(6), 381–391. · Nielsen Norman Group. Fitts's Law and Its Applications in UX. <a href="https://www.nngroup.com/articles/fitts-law/" target="_blank" rel="noopener">nngroup.com</a></li>
+        <li>Hooper, S. L., &amp; Mackinnon, L. T. (1995). Monitoring overtraining in athletes. <i>Sports Medicine, 20</i>(5), 321–327 (escala 1–7 del check-in). <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Hooper+Mackinnon+1995+Monitoring+overtraining+in+athletes" target="_blank" rel="noopener">PubMed</a></li>
+        <li>World Anti-Doping Agency. ADAMS y whereabouts. <a href="https://www.wada-ama.org/en/athletes-support-personnel/adams" target="_blank" rel="noopener">wada-ama.org</a></li>
+        <li>Estructura de pantallas y flujos: archivo de Figma del proyecto, página "03 · Wireframes". <span class="tag b">B</span></li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<script src="wireframe.js"></script>
