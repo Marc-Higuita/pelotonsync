@@ -15,7 +15,7 @@ def head(title,desc):
 <link href="https://fonts.googleapis.com/css2?family=Doto:wght@700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;600&family=Unbounded:wght@300;700&display=swap" rel="stylesheet">
 <script>try{{var t=localStorage.getItem('ps-theme');if(t)document.documentElement.dataset.theme=t;if(sessionStorage.getItem('ps-intro'))document.documentElement.classList.add('no-intro')}}catch(e){{}}</script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script><script src="effects.js" defer></script></head><body>'''+INTRO
+<link rel="stylesheet" href="styles.css"><script src="grega-rider.js" defer></script><script src="app.js" defer></script><script src="effects.js" defer></script></head><body>'''+INTRO
 def nav(cur):
     li=''.join(f'<li><a href="{"/" if p=="index" else "/"+p}"{" aria-current=\"page\"" if p==cur else ""}>{n}</a></li>' for p,n in PAGES)
     return f'''<div class="progress"></div><nav class="nav" aria-label="Principal"><a class="brand" href="/">{LOGO}<span>Peloton<b>Sync</b></span></a><ul>{li}</ul>

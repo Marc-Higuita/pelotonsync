@@ -60,3 +60,23 @@ if(us){
  new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){draw(0);o.disconnect()}}),{threshold:.4}).observe(us);
 }
 })();
+
+// Visor del wireframe: 53 pantallas en grises, se pasan con flechas, teclado o deslizando.
+(function(){
+  const S=window.WF_SCREENS;if(!S)return;
+  const img=document.getElementById('wfvImg'),title=document.getElementById('wfvTitle'),count=document.getElementById('wfvCount'),group=document.getElementById('wfvGroup'),th=document.getElementById('wfvThumbs');
+  const grp=n=>{const k=parseInt(n,10);if(k<=4)return'Entrada: splash, acceso, rol y conexión de datos';if([16,17,18,23,24,25,26,27,28,29,30,31,35,36].includes(k))return'Equipo técnico';if(k>=42)return'Médico del equipo';return'Ciclista'};
+  th.innerHTML=S.map((s,i)=>`<button type="button" aria-label="${s[1]}"><img loading="lazy" src="assets/wfs/${s[0]}" alt=""><span>${s[1].split(' · ')[0]}</span></button>`).join('');
+  let i=0;
+  const show=(n,dir)=>{i=(n+S.length)%S.length;const s=S[i];img.classList.remove('in-l','in-r');void img.offsetWidth;img.src='assets/wfs/'+s[0];img.alt='Wireframe '+s[1];img.classList.add(dir<0?'in-l':'in-r');
+    const parts=s[1].split(' · ');title.textContent=parts.slice(1).join(' · ')||s[1];group.textContent=parts[0]+' · '+grp(parts[0]);count.textContent=String(i+1).padStart(2,'0')+' / '+S.length;
+    [...th.children].forEach((b,j)=>b.classList.toggle('on',j===i));const b=th.children[i];th.scrollTo({left:b.offsetLeft-th.clientWidth/2+b.clientWidth/2,behavior:'smooth'});
+    const nx=new Image();nx.src='assets/wfs/'+S[(i+1)%S.length][0]};
+  document.querySelector('.wfv-arrow.prev').onclick=()=>show(i-1,-1);document.querySelector('.wfv-arrow.next').onclick=()=>show(i+1,1);
+  [...th.children].forEach((b,j)=>b.onclick=()=>show(j,j<i?-1:1));
+  const vis=document.getElementById('visor');let inView=false;new IntersectionObserver(es=>inView=es[0].isIntersecting,{threshold:.3}).observe(vis);
+  addEventListener('keydown',e=>{if(!inView)return;if(e.key==='ArrowRight'){show(i+1,1);e.preventDefault()}if(e.key==='ArrowLeft'){show(i-1,-1);e.preventDefault()}});
+  let x0=null;const st=document.querySelector('.wfv-stage');st.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});st.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(i+(dx<0?1:-1),dx<0?1:-1);x0=null});
+  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){vis.querySelector('.wfv').classList.add('go');io.disconnect()}},{threshold:.3});io.observe(vis);
+  show(0,1);
+})();

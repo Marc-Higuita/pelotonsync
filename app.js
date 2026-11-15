@@ -48,31 +48,14 @@
   }
 
   // ---------- Grega en bici (SVG), con el uniforme PelotonSync ----------
-  const KITS={team:['#0E100E','#CCFF00','#CCFF00','#F3F1EA'],ruta:['#3FC8E4','#0E100E','#3FC8E4','#3FC8E4'],rend:['#FF6A2B','#0E100E','#FF6A2B','#FF6A2B'],agenda:['#8E6BFF','#CCFF00','#8E6BFF','#8E6BFF'],equipo:['#5BD68A','#0E100E','#5BD68A','#5BD68A']};
-  let uid=0;
-  function gregaSVG(kit){const [j,s,f,hc]=KITS[kit]||KITS.team;const id='g'+(uid++);
-    return `<svg viewBox="0 0 220 160" aria-hidden="true"><defs><radialGradient id="${id}b" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#F4FFB0"/><stop offset=".5" stop-color="#CCFF00"/><stop offset="1" stop-color="#7FA300"/></radialGradient><clipPath id="${id}c"><circle cx="112" cy="50" r="30"/></clipPath></defs>
-    <ellipse cx="110" cy="152" rx="90" ry="5" fill="rgba(0,0,0,.18)"/>
-    <g class="w" data-cx="48" data-cy="118"><circle cx="48" cy="118" r="30" fill="none" stroke="#4F534E" stroke-width="7"/><path class="sp" d="M48 92V144M22 118H74M30 100L66 136M66 100L30 136" stroke="#4F534E" stroke-width="1.4"/></g>
-    <g class="w" data-cx="170" data-cy="118"><circle cx="170" cy="118" r="30" fill="none" stroke="#A9ADA6" stroke-width="7"/><path class="sp" d="M170 92V144M144 118H196M152 100L188 136M188 100L152 136" stroke="#A9ADA6" stroke-width="1.4"/></g>
-    <g fill="none" stroke="${f}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M48 118L104 114L86 74L150 72L104 114M48 118L86 74M150 72L170 118M150 72L158 58"/></g>
-    <path d="M150 60H166" stroke="#0E100E" stroke-width="5" stroke-linecap="round"/><path d="M76 72H96" stroke="#0E100E" stroke-width="6" stroke-linecap="round"/>
-    <polyline class="leg1" fill="none" stroke="#A9ADA6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><polyline class="leg2" fill="none" stroke="#6b7066" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <line class="arm" x1="128" y1="62" x2="160" y2="60" stroke="#0E100E" stroke-width="5" stroke-linecap="round"/>
-    <g class="bd"><circle cx="112" cy="50" r="31.5" fill="none" stroke="rgba(243,241,234,.35)" stroke-width="1.5"/><circle cx="112" cy="50" r="30" fill="url(#${id}b)"/>
-    <g clip-path="url(#${id}c)"><rect x="70" y="63" width="90" height="40" fill="${j}"/><rect x="70" y="64" width="90" height="4" fill="${s}"/>
-    <g transform="translate(101 70.5) scale(.15)"><circle cx="36" cy="36" r="26" fill="none" stroke="${s}" stroke-width="9"/><circle cx="68" cy="36" r="26" fill="none" stroke="${s}" stroke-width="9"/><circle cx="100" cy="36" r="28" fill="${s}"/></g></g>
-    <path d="M88 31Q98 15 120 17Q138 20 140 31Z" fill="${hc}"/><path d="M102 21L106 28M114 18L116 27M127 19L127 27" stroke="rgba(0,0,0,.3)" stroke-width="2"/>
-    <rect class="eye" x="121" y="38" width="5" height="12" rx="2.5" fill="#0E100E"/><rect class="eye" x="131" y="38" width="5" height="12" rx="2.5" fill="#0E100E"/>
-    <circle cx="101" cy="42" r="4" fill="#fff" opacity=".7"/></g></svg>`}
   const live=[];
-  function riders(){document.querySelectorAll('.gr').forEach(el=>{el.innerHTML=gregaSVG(el.dataset.kit);live.push({el,a:Math.random()*6,sp:parseFloat(el.dataset.speed||'1'),l1:el.querySelector('.leg1'),l2:el.querySelector('.leg2'),ws:el.querySelectorAll('.w'),bd:el.querySelector('.bd'),eyes:el.querySelectorAll('.eye')})});
+  function riders(){document.querySelectorAll('.gr').forEach(el=>{el.innerHTML=window.gregaSVG(el.dataset.kit,el.dataset.mood);live.push({el,a:Math.random()*6,sp:parseFloat(el.dataset.speed||'1'),l1:el.querySelector('.leg1'),l2:el.querySelector('.leg2'),ws:el.querySelectorAll('.w'),bd:el.querySelector('.bd'),eyes:el.querySelectorAll('.eye')})});
     if(!live.length)return;const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const legPts=(a)=>{const px=104+Math.cos(a)*13,py=114+Math.sin(a)*13,hx=100,hy=74,kx=(hx+px)/2+12,ky=(hy+py)/2-4;return `${hx},${hy} ${kx},${ky} ${px},${py}`};
+    const legPts=window.gregaLegPts;
     (function loop(t){live.forEach(r=>{if(!still)r.a+=.09*r.sp;const b=Math.abs(Math.sin(r.a))*2;
       r.l1.setAttribute('points',legPts(r.a));r.l2.setAttribute('points',legPts(r.a+Math.PI));
       r.ws.forEach(w=>w.querySelector('.sp').setAttribute('transform',`rotate(${r.a*60} ${w.dataset.cx} ${w.dataset.cy})`));
-      r.bd.setAttribute('transform',`translate(0 ${b})`);const bl=((t/1000+r.a*.1)%4)<.12;r.eyes.forEach(e=>e.setAttribute('transform',bl?'translate(0 5) scale(1 .2)':''))});requestAnimationFrame(loop)})(0);
+      r.bd.setAttribute('transform',`translate(0 ${b+(r.el.dataset.mood==='agotado'?4:0)})`);const bl=((t/1000+r.a*.1)%4)<.12;r.eyes.forEach(e=>e.setAttribute('transform',bl?'translate(0 5) scale(1 .2)':''))});requestAnimationFrame(loop)})(0);
     // carril al final de cada página: Grega cruza la pantalla según el scroll
     const lane=document.querySelector('.ride-lane');if(lane){const gs=lane.querySelectorAll('.gr');const mv=()=>{const h=document.documentElement,p=h.scrollTop/((h.scrollHeight-h.clientHeight)||1);gs.forEach((g,i)=>g.style.transform=`translateX(${(p*(lane.clientWidth+260))-260-i*150}px)`)};addEventListener('scroll',mv,{passive:true});mv()}
     // acceso: Grega llega rodando

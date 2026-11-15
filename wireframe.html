@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Doto:wght@700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;600&family=Unbounded:wght@300;700&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('ps-theme');if(t)document.documentElement.dataset.theme=t;if(sessionStorage.getItem('ps-intro'))document.documentElement.classList.add('no-intro')}catch(e){}</script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script><script src="effects.js" defer></script></head><body><div id="intro" aria-hidden="true"><button class="skip" type="button">Saltar</button><div class="lines"></div><div class="stage"><div class="road"></div>
+<link rel="stylesheet" href="styles.css"><script src="grega-rider.js" defer></script><script src="app.js" defer></script><script src="effects.js" defer></script></head><body><div id="intro" aria-hidden="true"><button class="skip" type="button">Saltar</button><div class="lines"></div><div class="stage"><div class="road"></div>
 <svg viewBox="4 4 136 64"><g class="wheel w1"><circle cx="36" cy="36" r="26" fill="none" stroke="#4F534E" stroke-width="9"/><g class="spokes" stroke="#4F534E" stroke-width="1.5"><path d="M36 12V60M12 36H60M19 19L53 53M53 19L19 53"/></g></g><g class="wheel w2"><circle cx="68" cy="36" r="26" fill="none" stroke="#090B08" stroke-width="15"/><circle cx="68" cy="36" r="26" fill="none" stroke="#A9ADA6" stroke-width="9"/><g class="spokes" stroke="#A9ADA6" stroke-width="1.5"><path d="M68 12V60M44 36H92M51 19L85 53M85 19L51 53"/></g></g><circle class="iball" cx="100" cy="36" r="28" fill="#CCFF00" stroke="#090B08" stroke-width="6"/></svg>
 <div class="word"><span style="animation-delay:1.9s">Peloton</span><span style="animation-delay:2s"><b>Sync</b></span></div></div>
 <div class="meta"><span>Tu equipo, a rueda contigo</span><span class="count">000</span><span>SAHG SAS × Higuita Monster</span></div></div><div class="progress"></div><nav class="nav" aria-label="Principal"><a class="brand" href="/"><svg viewBox="4 4 136 64" aria-hidden="true"><path class="ring1" d="M36 62C50.36 62 62 50.36 62 36S50.36 10 36 10 10 21.64 10 36s11.64 26 26 26Z" fill="none" stroke="#4F534E" stroke-width="9"/><path d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="var(--bg)" stroke-width="15" class="ring2 cut"/><path class="ring2" d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="#A9ADA6" stroke-width="9"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="var(--bg)" stroke-width="15"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="#4F534E" stroke-width="9"/><circle class="ball" cx="100" cy="36" r="28" fill="#CCFF00" stroke="var(--bg)" stroke-width="6"/></svg><span>Peloton<b>Sync</b></span></a><ul><li><a href="/">Inicio</a></li><li><a href="/marca">Manual de marca</a></li><li><a href="/investigacion">Investigación</a></li><li><a href="/wireframe" aria-current="page">Wireframe</a></li><li><a href="/prototipo">Prototipo</a></li></ul>
@@ -16,22 +16,34 @@
     <h1 class="rv d1">La estructura<br><b>antes del color.</b></h1>
     <p class="lead rv d2" style="margin-top:24px">53 pantallas en grises, con la misma navegación del prototipo final. Las X marcan dónde irá una ilustración. Sirven para probar si el recorrido funciona sin que el color y las ilustraciones distraigan.</p>
     <div class="rv d3" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px">
-      <a class="btn" target="_blank" rel="noopener" href="https://www.figma.com/proto/eOCPJYLIfA6pfTA1UvSpxY/PelotonSync-%E2%80%94-Prototipo?node-id=119-18079&p=f&t=lDr2trxhtASS2ew2-1&scaling=min-zoom&content-scaling=fixed&page-id=108%3A345&starting-point-node-id=119%3A18079&show-proto-sidebar=1">Abrir wireframe navegable <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      <a class="btn" href="#visor">Ver las 53 pantallas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
       <a class="btn ghost" href="#mapa">Ver el mapa de interacción</a>
     </div>
   </div>
 </section>
 
-<section class="tinted t-volt" style="padding-top:0">
+<section id="visor" class="tinted t-volt" style="padding-top:0">
   <div class="wrap">
-    <div class="glow access" style="--aura:rgba(204,255,0,.35)">
-      <div><span class="bubble">Aquí está la estructura, en grises →</span><div class="gr" data-kit="ruta" data-speed="1.4"></div></div>
-      <div><p class="mono" style="color:rgba(243,241,234,.55);margin-bottom:14px">Acceso directo · se abre en Figma</p>
-        <a class="btn-xl" href="https://www.figma.com/proto/eOCPJYLIfA6pfTA1UvSpxY/PelotonSync-%E2%80%94-Prototipo?node-id=119-18079&p=f&t=lDr2trxhtASS2ew2-1&scaling=min-zoom&content-scaling=fixed&page-id=108%3A345&starting-point-node-id=119%3A18079&show-proto-sidebar=1" target="_blank" rel="noopener"><span>Abrir el wireframe navegable<small>53 pantallas en grises · misma navegación del prototipo</small></span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
-        <p style="margin-top:16px;font-size:14px">Funciona en computador y en celular. En el computador, usa las flechas o haz clic en las zonas activas para avanzar.</p></div>
+    <div class="glow wfv" style="--aura:rgba(204,255,0,.3)">
+      <div class="wfv-side">
+        <span class="bubble">Pasa con las flechas →</span>
+        <div class="gr" data-kit="ruta" data-speed="1.3"></div>
+        <p class="mono" style="color:rgba(243,241,234,.55);margin-top:18px">Visor del wireframe</p>
+        <h3 style="color:#F3F1EA;margin:8px 0 6px" id="wfvTitle">—</h3>
+        <p id="wfvGroup" style="font-size:14px"></p>
+        <div class="wfv-count led" id="wfvCount">01 / 53</div>
+        <p style="font-size:13px;margin-top:10px">Usa las flechas de la pantalla o del teclado. En el celular, desliza.</p>
+      </div>
+      <div class="wfv-stage">
+        <button class="wfv-arrow prev" type="button" aria-label="Pantalla anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <div class="wfv-phone"><img id="wfvImg" src="assets/wfs/00.webp" alt=""></div>
+        <button class="wfv-arrow next" type="button" aria-label="Pantalla siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
     </div>
+    <div class="wfv-thumbs" id="wfvThumbs" data-lenis-prevent></div>
   </div>
 </section>
+<script>window.WF_SCREENS=[["00.webp", "01a · Splash · pelotón llega"], ["01.webp", "01b · Splash · a rueda"], ["02.webp", "01c · Splash · encadenado"], ["03.webp", "01d · Splash · PelotonSync"], ["04.webp", "02 · Acceso"], ["05.webp", "03 · Elige tu rol"], ["06.webp", "03b · Elige tu rol · equipo"], ["07.webp", "03c · Tu rol en el equipo"], ["08.webp", "04 · Conecta tus datos"], ["09.webp", "05 · Inicio"], ["10.webp", "06 · Check-in"], ["11.webp", "06a · Check-in · Grega llega"], ["12.webp", "06b · Check-in · Grega saluda"], ["13.webp", "06c · Check-in · recomendaciones"], ["14.webp", "07 · Ruta · semana"], ["15.webp", "08 · Ruta del día"], ["16.webp", "09 · Nutrición"], ["17.webp", "10 · Comida y peso"], ["18.webp", "11 · Rendimiento"], ["19.webp", "12 · Forma"], ["20.webp", "13 · Agenda"], ["21.webp", "14 · Grega"], ["22.webp", "15 · Emergencia"], ["23.webp", "16 · Equipo · panel"], ["24.webp", "17 · Equipo · ciclista"], ["25.webp", "18 · Equipo · asignar"], ["26.webp", "19 · Ajustes y perfil"], ["27.webp", "20 · Ruta · buscador"], ["28.webp", "21 · Calendario de comidas"], ["29.webp", "21a · Comidas · un día"], ["30.webp", "22 · Ficha médica"], ["31.webp", "23 · Equipo · resultados"], ["32.webp", "24 · Equipo · asignado"], ["33.webp", "25 · Equipo · crear entreno"], ["34.webp", "26 · Equipo · comparar"], ["35.webp", "27 · Equipo · alertas"], ["36.webp", "28 · Equipo · resultados de Sergio"], ["37.webp", "29 · Equipo · nutricionista"], ["38.webp", "30 · Equipo · psicóloga"], ["39.webp", "31 · Equipo · director"], ["40.webp", "32 · Descanso y recuperación"], ["41.webp", "33 · Carreras · temporada"], ["42.webp", "34 · Salud y oxigenación"], ["43.webp", "35 · Equipo · perfil director"], ["44.webp", "36 · Equipo · asignar carrera"], ["45.webp", "37 · Resultado de carrera"], ["46.webp", "38 · Preparación física"], ["47.webp", "39 · Historial médico"], ["48.webp", "40 · Medicamentos"], ["49.webp", "41 · Mi recuperación"], ["50.webp", "42 · Equipo · médico"], ["51.webp", "43 · Equipo · asignar medicamento"], ["52.webp", "44 · Equipo · dolor y recuperación"]];</script>
 
 <section class="tinted t-green" style="padding-top:20px;overflow:hidden">
   <div class="strip wf-strip rv">
@@ -76,12 +88,8 @@
   </div>
 </section>
 
-<section id="embed" class="tinted t-volt">
+<section id="embed" class="tinted t-volt" style="padding-top:20px">
   <div class="wrap">
-    <p class="eyebrow rv">Pruébalo</p>
-    <h2 class="rv d1">Wireframe<br><b>navegable.</b></h2>
-    <div class="embed rv d2" style="margin-top:20px"><iframe loading="lazy" title="Wireframe navegable de PelotonSync en Figma" allowfullscreen src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FeOCPJYLIfA6pfTA1UvSpxY%2FPelotonSync-%25E2%2580%2594-Prototipo%3Fnode-id%3D119-18079%26p%3Df%26t%3DlDr2trxhtASS2ew2-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26page-id%3D108%253A345%26starting-point-node-id%3D119%253A18079%26show-proto-sidebar%3D1"></iframe></div>
-    <p class="mono" style="margin-top:12px">Si no carga, ábrelo en Figma con el botón de arriba. El archivo debe estar compartido como "cualquiera con el enlace puede ver".</p>
     <details class="sources">
       <summary>Fuentes de esta página</summary>
       <ol>
