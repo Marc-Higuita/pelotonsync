@@ -457,3 +457,46 @@ section.tinted::before{content:"";position:absolute;inset:0;z-index:-1;pointer-e
 .marquee .track i{color:#CCFF00}
 footer{background:linear-gradient(180deg,transparent,color-mix(in srgb,#8C9A2A 22%,transparent))}
 .photo .cap h2 b{color:#CCFF00}
+
+/* ===== v4 ===== */
+/* el 3D vive a la derecha y no tapa el texto */
+@media (min-width:901px){
+  .hero canvas#three{left:44%;width:56%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%);mask-image:linear-gradient(90deg,transparent,#000 14%)}
+  .hero .wrap h1,.hero .wrap .lead{max-width:min(620px,46vw)}
+  .hero h1{font-size:clamp(44px,6vw,96px)}
+}
+@media (max-width:900px){
+  .hero{flex-direction:column;align-items:stretch;padding-bottom:30px}
+  .hero canvas#three{position:relative;order:2;height:46vh;inset:auto;margin-top:10px}
+  .scroll-hint{display:none}
+}
+/* cambio de tema suave */
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+html.theme-anim *,html.theme-anim *::before{transition:background-color .9s ease,color .9s ease,border-color .9s ease,fill .9s ease!important}
+
+/* Grega en bici (SVG) */
+.gr{display:inline-block;width:220px;max-width:100%}
+.gr svg{width:100%;height:auto;overflow:visible}
+.gr.sm{width:120px}
+.ride-lane{position:relative;z-index:2;height:120px;overflow:hidden;border-top:1px dashed var(--line)}
+.ride-lane .gr{position:absolute;bottom:4px;left:0;will-change:transform}
+.ride-lane::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 24px,transparent 24px 40px)}
+.uniformes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:900px){.uniformes{grid-template-columns:1fr}}
+.uniformes figure{display:grid;place-items:center;gap:10px;padding:26px 16px}
+.uniformes figcaption{text-align:center;font-size:14px;color:var(--muted)}
+/* acceso grande a Figma */
+.access{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:center;padding:clamp(24px,4vw,50px);margin-top:30px}
+@media (max-width:900px){.access{grid-template-columns:1fr}}
+.access .gr{width:100%;max-width:420px;transform:translateX(-120vw)}
+.access.go .gr{animation:ridein 2.4s cubic-bezier(.2,.75,.25,1) forwards}
+@keyframes ridein{0%{transform:translateX(-120vw)}100%{transform:none}}
+.access .bubble{opacity:0;transform:translateY(10px) scale(.95);transition:.5s 2.2s;background:#F3F1EA;color:#0E100E;border-radius:20px 20px 20px 4px;padding:12px 16px;font-weight:600;display:inline-block;margin-bottom:14px}
+.access.go .bubble{opacity:1;transform:none}
+.btn-xl{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:30px 34px;border-radius:30px;background:#CCFF00;color:#0E100E;text-decoration:none;font-family:var(--f-display);font-weight:700;font-size:clamp(22px,2.6vw,34px);line-height:1.1;position:relative;box-shadow:0 20px 60px -15px rgba(204,255,0,.7);transition:transform .3s}
+.btn-xl:hover{transform:translateY(-4px) scale(1.01)}
+.btn-xl small{display:block;font-family:var(--f-mono);font-weight:400;font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.65;margin-top:8px}
+.btn-xl .arr{width:64px;height:64px;border-radius:50%;background:#0E100E;color:#CCFF00;display:grid;place-items:center;flex:none}
+.btn-xl .arr svg{width:28px;height:28px}
+.btn-xl::after{content:"";position:absolute;inset:-6px;border-radius:36px;border:2px solid #CCFF00;opacity:0;animation:pulseRing 2.2s infinite}
+@keyframes pulseRing{0%{opacity:.8;transform:scale(.98)}100%{opacity:0;transform:scale(1.06)}}
