@@ -23,7 +23,7 @@ def nav(cur):
 FOOT='''<footer><div class="wrap"><div class="cols"><div><a class="brand" href="/" style="display:flex;gap:10px;align-items:center;text-decoration:none;font-family:var(--f-display);font-weight:700">'''+LOGO.replace('<svg','<svg width="54" height="28"')+'''<span>Peloton<b class="volt">Sync</b></span></a>
 <p style="margin-top:14px;max-width:460px">Proyecto de práctica: propuesta de innovación y prototipo navegable UX/UI de alta fidelidad. Desarrollado en el entorno de SAHG SAS y Higuita Monster, con Sergio Higuita como caso de estudio. Entrega: 16 de noviembre de 2026.</p></div>
 <div><p class="mono" style="margin-bottom:10px">Cómo leer las fuentes</p><p style="display:flex;flex-wrap:wrap;gap:6px;max-width:420px"><span class="tag f">F · científica u oficial</span><span class="tag p">P · prensa o equipo</span><span class="tag e">E · estimación</span><span class="tag b">B · contexto del proyecto</span><span class="tag h">H · hipótesis sin validar</span></p></div></div>
-<p class="mono" style="margin-top:40px">Ilustraciones, pantallas y personaje Grega: diseño propio del proyecto. Cifras de la app: datos de ejemplo. Las pruebas de usabilidad se hicieron por recorrido cognitivo con proto-personas.</p></div></footer>'''
+<p class="mono" style="margin-top:40px">Ilustraciones, pantallas y personaje Grega: diseño propio del proyecto. Fotografías: archivo de Sergio Higuita / Higuita Monster, con permiso. Cifras de la app: datos de ejemplo. Las pruebas de usabilidad se hicieron por recorrido cognitivo con proto-personas.</p></div></footer>'''
 for p,n in PAGES:
     src=(B/'src'/f'{p}.html').read_text()
     m=re.match(r'<!--(.*?)\|(.*?)-->',src)

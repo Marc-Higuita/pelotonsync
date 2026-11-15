@@ -435,3 +435,25 @@ table.ct .pill{display:inline-block;padding:6px 12px;border-radius:10px;font-wei
 html.lenis,html.lenis body{height:auto}html.lenis{scroll-behavior:auto}
 #grega3d{height:520px}
 @media (max-width:900px){.hs{min-height:0!important;padding:0 28px}}
+
+/* ===== color por sección ===== */
+.t-ruta{--tc:#3FC8E4;--tci:#3FC8E4}.t-volt{--tc:#CCFF00;--tci:#CCFF00}.t-orange{--tc:#FF6A2B;--tci:#FF8A55}.t-violet{--tc:#8E6BFF;--tci:#A88CFF}.t-green{--tc:#5BD68A;--tci:#5BD68A}
+[data-theme="light"] .t-ruta{--tci:#0f6e82}[data-theme="light"] .t-volt{--tci:#367000}[data-theme="light"] .t-orange{--tci:#c4471a}[data-theme="light"] .t-violet{--tci:#5a3fd0}[data-theme="light"] .t-green{--tci:#1d7a43}
+section.tinted{isolation:isolate}
+section.tinted::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(45% 38% at 88% 8%,color-mix(in srgb,var(--tc) 20%,transparent),transparent 72%),radial-gradient(38% 32% at 4% 92%,color-mix(in srgb,var(--tc) 13%,transparent),transparent 72%)}
+[data-theme="light"] section.tinted::before{background:radial-gradient(45% 38% at 88% 8%,color-mix(in srgb,var(--tc) 28%,transparent),transparent 72%),radial-gradient(38% 32% at 4% 92%,color-mix(in srgb,var(--tc) 18%,transparent),transparent 72%)}
+.tinted h1 b,.tinted h2 b,.tinted h3 b{color:var(--tci)}
+.tinted .eyebrow::before{background:var(--tc);box-shadow:0 0 10px var(--tc)}
+.tinted .card{background:color-mix(in srgb,var(--tc) 7%,var(--surface));border-color:color-mix(in srgb,var(--tc) 22%,var(--line))}
+.tinted .callout{border-left-color:var(--tc);background:color-mix(in srgb,var(--tc) 8%,var(--surface))}
+.tinted .seg button.on,.tinted .tests-filter button.on,.tinted .types-ui .list button.on{background:var(--tc);color:#0E100E;border-color:var(--tc)}
+/* bandas */
+.band-volt{background:#CCFF00;color:#0E100E}
+.band-volt .scrub-text,.band-volt .eyebrow{color:#0E100E}
+.band-volt .scrub-text b{color:#0E100E;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
+.band-volt .eyebrow::before{background:#0E100E;box-shadow:none}
+.marquee{background:linear-gradient(90deg,#8C9A2A,#1F250A 60%,#0E100E);color:#F3F1EA;border:0}
+.marquee .track i{color:#CCFF00}
+footer{background:linear-gradient(180deg,transparent,color-mix(in srgb,#8C9A2A 22%,transparent))}
+.photo .cap h2 b{color:#CCFF00}
