@@ -3,20 +3,25 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Doto:wght@700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;600&family=Unbounded:wght@300;700&display=swap" rel="stylesheet">
-<script>try{var t=localStorage.getItem('ps-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body><div class="progress"></div><nav class="nav" aria-label="Principal"><a class="brand" href="/"><svg viewBox="4 4 136 64" aria-hidden="true"><path class="ring1" d="M36 62C50.36 62 62 50.36 62 36S50.36 10 36 10 10 21.64 10 36s11.64 26 26 26Z" fill="none" stroke="#4F534E" stroke-width="9"/><path d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="var(--bg)" stroke-width="15" class="ring2 cut"/><path class="ring2" d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="#A9ADA6" stroke-width="9"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="var(--bg)" stroke-width="15"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="#4F534E" stroke-width="9"/><circle class="ball" cx="100" cy="36" r="28" fill="#CCFF00" stroke="var(--bg)" stroke-width="6"/></svg><span>Peloton<b>Sync</b></span></a><ul><li><a href="/" aria-current="page">Inicio</a></li><li><a href="/marca">Manual de marca</a></li><li><a href="/investigacion">Investigación</a></li><li><a href="/wireframe">Wireframe</a></li><li><a href="/prototipo">Prototipo</a></li></ul>
+<script>try{var t=localStorage.getItem('ps-theme');if(t)document.documentElement.dataset.theme=t;if(sessionStorage.getItem('ps-intro'))document.documentElement.classList.add('no-intro')}catch(e){}</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script><script src="effects.js" defer></script></head><body><div id="intro" aria-hidden="true"><button class="skip" type="button">Saltar</button><div class="lines"></div><div class="stage"><div class="road"></div>
+<svg viewBox="4 4 136 64"><g class="wheel w1"><circle cx="36" cy="36" r="26" fill="none" stroke="#4F534E" stroke-width="9"/><g class="spokes" stroke="#4F534E" stroke-width="1.5"><path d="M36 12V60M12 36H60M19 19L53 53M53 19L19 53"/></g></g><g class="wheel w2"><circle cx="68" cy="36" r="26" fill="none" stroke="#090B08" stroke-width="15"/><circle cx="68" cy="36" r="26" fill="none" stroke="#A9ADA6" stroke-width="9"/><g class="spokes" stroke="#A9ADA6" stroke-width="1.5"><path d="M68 12V60M44 36H92M51 19L85 53M85 19L51 53"/></g></g><circle class="iball" cx="100" cy="36" r="28" fill="#CCFF00" stroke="#090B08" stroke-width="6"/></svg>
+<div class="word"><span style="animation-delay:1.9s">Peloton</span><span style="animation-delay:2s"><b>Sync</b></span></div></div>
+<div class="meta"><span>Tu equipo, a rueda contigo</span><span class="count">000</span><span>SAHG SAS × Higuita Monster</span></div></div><div class="progress"></div><nav class="nav" aria-label="Principal"><a class="brand" href="/"><svg viewBox="4 4 136 64" aria-hidden="true"><path class="ring1" d="M36 62C50.36 62 62 50.36 62 36S50.36 10 36 10 10 21.64 10 36s11.64 26 26 26Z" fill="none" stroke="#4F534E" stroke-width="9"/><path d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="var(--bg)" stroke-width="15" class="ring2 cut"/><path class="ring2" d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="#A9ADA6" stroke-width="9"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="var(--bg)" stroke-width="15"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="#4F534E" stroke-width="9"/><circle class="ball" cx="100" cy="36" r="28" fill="#CCFF00" stroke="var(--bg)" stroke-width="6"/></svg><span>Peloton<b>Sync</b></span></a><ul><li><a href="/" aria-current="page">Inicio</a></li><li><a href="/marca">Manual de marca</a></li><li><a href="/investigacion">Investigación</a></li><li><a href="/wireframe">Wireframe</a></li><li><a href="/prototipo">Prototipo</a></li></ul>
 <button class="theme-btn" type="button" aria-label="Cambiar tema"></button><button class="theme-btn menu-btn" type="button" aria-label="Menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button></nav><main>
 <section class="hero">
   <div class="hero-aura"></div>
   <canvas id="three" aria-hidden="true"></canvas>
   <div class="wrap">
     <p class="eyebrow rv">Proyecto de práctica · SAHG SAS × Higuita Monster</p>
-    <h1 class="rv d1">Tu equipo,<br><b>a rueda contigo.</b></h1>
+    <h1>Tu equipo,<br><b>a rueda contigo.</b></h1>
     <p class="lead rv d2">PelotonSync junta en una sola app lo que hoy vive regado en hojas de cálculo, PDFs, chats y apps sueltas: entrenos, comida, cómo amaneció el cuerpo, médico, medicamentos y agenda. El ciclista registra en 30 segundos y su equipo ve lo que necesita.</p>
     <div class="rv d3" style="display:flex;gap:12px;flex-wrap:wrap">
       <a class="btn" href="/prototipo">Ver el prototipo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn ghost" href="/investigacion">Leer la investigación</a>
     </div>
+    <p class="mono rv d4" style="margin-top:28px">Mueve el mouse · haz clic para acelerar el pelotón</p>
   </div>
   <div class="scroll-hint mono">Rueda abajo<span></span></div>
 </section>
@@ -25,12 +30,21 @@
   <span><b>Entrena.</b> Registra. <i>Recupera.</i></span><span>●</span><span>Un solo lugar <b>para todo el pelotón</b></span><span>●</span><span><b>Entrena.</b> Registra. <i>Recupera.</i></span><span>●</span><span>Un solo lugar <b>para todo el pelotón</b></span><span>●</span>
 </div></div>
 
+<section id="manifiesto">
+  <div class="wrap">
+    <p class="eyebrow rv">00 · Manifiesto</p>
+    <p class="scrub-text" style="margin-top:26px">Un ciclista profesional pasa entre 25 y 35 horas a la semana sobre la bici. Cuando por fin se baja, le toca ser su propio secretario: contarle al médico qué le duele, al preparador cómo durmió, a la nutricionista qué comió y a la agencia antidopaje dónde va a estar mañana. <b>PelotonSync existe para que el ciclista solo tenga que hacer una cosa: rodar.</b> Y para que su equipo, por fin, vaya a rueda con él.</p>
+  </div>
+</section>
+
+<div class="photo full"><img src="assets/photo/montana.webp" alt="Pelotón subiendo una carretera de montaña al amanecer, entre nubes"><div class="cap wrap"><p class="mono" style="color:rgba(243,241,234,.7)">Antioquia · 5:40 a. m.</p><h2>Antes de que salga el sol,<br><b>ya hay datos.</b></h2></div></div>
+
 <section id="problema">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow rv">01 · Por qué existe</p>
-      <h2 class="rv d1">Mucho cuerpo,<br><b>datos regados.</b></h2>
-      <p class="lead rv d2">Un ciclista de ruta entrena entre 25 y 35 horas por semana <span class="tag b">B</span>. Al bajarse de la bici todavía le toca reportar cómo durmió, qué comió, qué le duele y cuándo es el control antidopaje, cada cosa en un lugar distinto. Lo hace justo en las horas en que debería descansar.</p>
+      <h2>Mucho cuerpo,<br><b>datos regados.</b></h2>
+      <p class="lead rv d2">Un ciclista de ruta entrena entre 25 y 35 horas por semana <span class="tag b">B</span>. Cada número de abajo habla de lo mismo: el cuerpo del ciclista produce información valiosa todos los días, y casi nada de ella se cruza a tiempo.</p>
     </div>
     <div class="grid g4">
       <div class="glow stat rv" style="--aura:rgba(204,255,0,.35)"><div class="num"><span data-count="25">0</span><small> h</small></div><h4>de entreno por semana</h4><p>Un profesional WorldTour, con días de 4 a 5 h en la bici. <span class="tag p">P</span><sup class="ref"><a href="#s1">1</a></sup></p></div>
@@ -39,7 +53,7 @@
       <div class="glow stat rv d3" style="--aura:rgba(142,107,255,.45)"><div class="num"><span data-count="28">0</span><small> %</small></div><h4>de error con fórmulas genéricas</h4><p>Las ecuaciones de población general subestiman el gasto fuera del ejercicio. <span class="tag f">F</span><sup class="ref"><a href="#s4">4</a></sup></p></div>
     </div>
 
-    <div style="margin-top:80px" class="rv">
+    <div style="margin-top:90px" class="rv">
       <h3>¿Dónde está hoy cada dato?</h3>
       <p>Toca el interruptor o sigue bajando: así se ve la operación de un ciclista antes y después de sincronizarla.</p>
       <div class="toggle-row"><div class="seg" role="group" aria-label="Estado"><button class="on" data-frag="0">Hoy: fragmentado</button><button data-frag="1">Con PelotonSync</button></div></div>
@@ -51,54 +65,87 @@
   </div>
 </section>
 
+<section id="dia">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">02 · Un día con PelotonSync</p>
+      <h2>De la almohada<br><b>al rodillo.</b></h2>
+      <p class="lead rv d2">Sigue bajando: así acompaña la app un día de entreno, momento a momento.</p>
+    </div>
+    <div class="story">
+      <div class="vis">
+        <span class="clock">6:30</span>
+        <img src="assets/photo/casa.webp" alt="Ciclista revisando el celular en casa">
+        <img src="assets/photo/montana.webp" alt="Pelotón en la montaña">
+        <img src="assets/photo/mesa.webp" alt="Mesa con comidas preparadas, bidones y una tablet con datos">
+        <img src="assets/photo/manubrio.webp" alt="Manubrio con ciclocomputador mostrando gráficas">
+        <img src="assets/photo/casa.webp" alt="Ciclista descansando en la noche">
+        <div class="phone"><img src="assets/screens/checkin.webp" alt="Check-in"></div>
+        <div class="phone"><img src="assets/screens/ruta.webp" alt="Ruta del día"></div>
+        <div class="phone"><img src="assets/screens/nutricion.webp" alt="Nutrición"></div>
+        <div class="phone"><img src="assets/screens/rendimiento.webp" alt="Rendimiento"></div>
+        <div class="phone"><img src="assets/screens/grega-chat.webp" alt="Grega"></div>
+      </div>
+      <div class="steps2">
+        <div data-time="6:30"><p class="mono">Despertar · Registro</p><h3>Check-in de <b>30 segundos</b></h3><p>Grega pregunta cómo amaneció. El ciclista desliza su ánimo y marca sueño, estrés, fatiga y dolor en la escala de Hooper (1–7), una herramienta validada para detectar sobrecarga. <span class="tag f">F</span><sup class="ref"><a href="#s9">9</a></sup></p></div>
+        <div data-time="8:00"><p class="mono">Salir · Ruta</p><h3>La ruta que dejó <b>el preparador</b></h3><p>Con zonas de intensidad, clima por tramo, calidad del aire y polen. Si algo cambia, el ciclista lo ve antes de salir y no después de mojarse.</p></div>
+        <div data-time="13:30"><p class="mono">Comer · Nutrición</p><h3>Calorías asignadas, <b>no adivinadas</b></h3><p>La nutricionista asigna energía y macros según la carga real del día, porque las fórmulas genéricas se equivocan en cerca de un 28 %. <span class="tag f">F</span><sup class="ref"><a href="#s4">4</a></sup> El peso se ve en tendencia, nunca como meta diaria. <span class="tag f">F</span><sup class="ref"><a href="#s10">10</a></sup></p></div>
+        <div data-time="17:00"><p class="mono">Analizar · Datos</p><h3>Potencia y sensaciones, <b>en la misma gráfica</b></h3><p>Vatios, cadencia y frecuencia cardíaca llegan del ciclocomputador. La app los cruza con el check-in de la mañana: ahí se ve el sobreentrenamiento antes de que llegue.</p></div>
+        <div data-time="21:30"><p class="mono">Descansar · Agenda y Grega</p><h3>Mañana, <b>ya organizado</b></h3><p>Medicamento de la noche, cita médica, franja antidopaje del día siguiente. Grega lo recuerda y el ciclista se va a dormir sin pendientes en la cabeza.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="pregunta" style="padding-top:40px">
   <div class="wrap">
     <div class="glow rv" style="padding:clamp(30px,5vw,70px);--aura:rgba(204,255,0,.3)">
       <p class="mono" style="color:rgba(243,241,234,.5)">Pregunta de investigación <span class="tag b">B</span></p>
-      <h2 style="color:#F3F1EA;font-size:clamp(26px,3.4vw,46px)">¿Cómo centralizar la gestión de datos operativos, de rendimiento, nutrición y logística en una <b>plataforma digital unificada</b> para ciclistas profesionales, mejorando las decisiones del equipo técnico y <b>reduciendo la fricción</b> del deportista?</h2>
+      <p style="color:#F3F1EA;font-family:var(--f-display);font-weight:300;font-size:clamp(24px,3.2vw,44px);line-height:1.12;margin-top:14px">¿Cómo centralizar la gestión de datos operativos, de rendimiento, nutrición y logística en una <b style="font-weight:700">plataforma digital unificada</b> para ciclistas profesionales, mejorando las decisiones del equipo técnico y <b style="font-weight:700;color:#CCFF00">reduciendo la fricción</b> del deportista?</p>
     </div>
   </div>
 </section>
 
-<section id="pilares">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow rv">02 · La solución</p>
-      <h2 class="rv d1">Cuatro pilares,<br><b>un solo menú.</b></h2>
-      <p class="lead rv d2">El menú inferior tiene cuatro pilares <span class="tag b">B</span>. Cada uno tiene su color de aura para que el ciclista sepa dónde está sin leer.</p>
-    </div>
-    <div class="grid g4">
-      <article class="glow pillar rv" style="--aura:rgba(63,200,228,.5)"><span class="n">01</span><img src="assets/illus/escalador.webp" alt="Ilustración de ciclista escalando"><div><h3 style="color:#F3F1EA">Mapa de rutas</h3><p>La ruta que dejó el preparador, con clima, aire y polen por tramo.</p></div></article>
-      <article class="glow pillar rv d1" style="--aura:rgba(204,255,0,.45)"><span class="n">02</span><img src="assets/illus/tuppers.webp" alt="Ilustración de comidas preparadas"><div><h3 style="color:#F3F1EA">Nutrición y registro</h3><p>Check-in de 30 s: ánimo, sueño, estrés, dolor y la comida asignada.</p></div></article>
-      <article class="glow pillar rv d2" style="--aura:rgba(255,106,43,.5)"><span class="n">03</span><img src="assets/illus/sprint.webp" alt="Ilustración de ciclista en sprint"><div><h3 style="color:#F3F1EA">Datos y rendimiento</h3><p>Vatios, cadencia y sensaciones, con un mapa de calor de la fatiga.</p></div></article>
-      <article class="glow pillar rv d3" style="--aura:rgba(142,107,255,.55)"><span class="n">04</span><img src="assets/illus/pastillero.webp" alt="Ilustración de pastillero semanal"><div><h3 style="color:#F3F1EA">Agenda y Grega</h3><p>Entrenos, citas, medicamentos y antidopaje, más un asistente IA.</p></div></article>
-    </div>
+<section id="pilares" style="padding-bottom:0">
+  <div style="padding-bottom:30px" class="wrap">
+    <p class="eyebrow rv">03 · La solución</p>
+    <h2>Cuatro pilares,<br><b>un solo menú.</b></h2>
+    <p class="lead rv d2">El menú inferior tiene cuatro pilares <span class="tag b">B</span>, cada uno con su color de aura. Sigue bajando y recórrelos.</p>
   </div>
+  <div class="hs" style="min-height:100vh;display:flex;align-items:center"><div class="hs-track">
+    <article class="glow hs-card" style="--aura:rgba(63,200,228,.55)"><div><span class="mono" style="color:rgba(243,241,234,.5)">01 · Aura #3FC8E4</span><h3>Mapa de rutas</h3><p>La ruta que dejó el preparador, con perfil, clima por tramo, calidad del aire y polen. Para un ciclista alérgico, la capa de polen cambia la hora de salida.</p></div><div class="phone"><img src="assets/screens/ruta.webp" alt="Ruta del día"></div></article>
+    <article class="glow hs-card" style="--aura:rgba(204,255,0,.5)"><div><span class="mono" style="color:rgba(243,241,234,.5)">02 · Aura #CCFF00</span><h3>Nutrición y registro</h3><p>Check-in diario, comidas del plan, hidratación con un toque y fotos de lo que comió. Sin contar calorías a mano.</p></div><div class="phone"><img src="assets/screens/nutricion.webp" alt="Nutrición"></div></article>
+    <article class="glow hs-card" style="--aura:rgba(255,106,43,.55)"><div><span class="mono" style="color:rgba(243,241,234,.5)">03 · Aura #FF6A2B</span><h3>Datos y rendimiento</h3><p>Potencia normalizada, W/kg, cadencia, balance izquierda/derecha, VFC y un mapa de calor mensual de fatiga y mejora.</p></div><div class="phone"><img src="assets/screens/rendimiento.webp" alt="Rendimiento"></div></article>
+    <article class="glow hs-card" style="--aura:rgba(142,107,255,.6)"><div><span class="mono" style="color:rgba(243,241,234,.5)">04 · Aura #8E6BFF</span><h3>Agenda y Grega</h3><p>Entrenos, citas, medicamentos, carreras y la franja antidopaje en una sola línea de tiempo, más un asistente que recuerda y responde.</p></div><div class="phone"><img src="assets/screens/agenda.webp" alt="Agenda"></div></article>
+    <article class="glow hs-card" style="--aura:rgba(91,214,138,.5)"><div><span class="mono" style="color:rgba(243,241,234,.5)">+ Equipo técnico</span><h3>El otro lado</h3><p>Preparador, nutricionista, psicóloga, director y médico ven un semáforo del equipo, cada uno con solo los datos que le corresponden.</p></div><div class="phone"><img src="assets/screens/equipo-panel.webp" alt="Panel del equipo"></div></article>
+  </div></div>
 </section>
+
+<div class="photo full reveal-img"><img src="assets/photo/lluvia.webp" alt="Pelotón rodando a alta velocidad bajo la lluvia"><div class="cap wrap"><p class="mono" style="color:rgba(243,241,234,.7)">En carrera no hay tiempo</p><h2>Para formularios,<br><b>chats ni PDFs.</b></h2></div></div>
 
 <section id="app" style="overflow:hidden">
   <div class="wrap sec-head">
-    <p class="eyebrow rv">03 · Así se ve</p>
-    <h2 class="rv d1">Hecha para leerse<br><b>con las piernas cansadas.</b></h2>
+    <p class="eyebrow rv">04 · Así se ve</p>
+    <h2>Hecha para leerse<br><b>con las piernas cansadas.</b></h2>
     <p class="lead rv d2">Cambia el tema arriba a la derecha: la app tiene modo oscuro para la noche y la recuperación, y modo claro para el día en la calle.</p>
   </div>
-  <div class="phones-row rv">
+  <div class="phones-row">
     <div class="phone" data-tilt><img class="img-dark" src="assets/screens/inicio.webp" alt="Pantalla de inicio en modo oscuro"><img class="img-light" src="assets/screens/c-inicio.webp" alt="Pantalla de inicio en modo claro"></div>
     <div class="phone" data-tilt><img class="img-dark" src="assets/screens/checkin.webp" alt="Check-in diario"><img class="img-light" src="assets/screens/c-nutricion.webp" alt="Nutrición en modo claro"></div>
-    <div class="phone" data-tilt><img class="img-dark" src="assets/screens/rendimiento.webp" alt="Datos y rendimiento"><img class="img-light" src="assets/screens/c-rendimiento.webp" alt="Datos y rendimiento en modo claro"></div>
-    <div class="phone" data-tilt><img class="img-dark" src="assets/screens/agenda.webp" alt="Agenda"><img class="img-light" src="assets/screens/c-agenda.webp" alt="Agenda en modo claro"></div>
+    <div class="phone" data-tilt><img class="img-dark" src="assets/screens/resultado.webp" alt="Resultado de carrera"><img class="img-light" src="assets/screens/c-rendimiento.webp" alt="Datos y rendimiento en modo claro"></div>
+    <div class="phone" data-tilt><img class="img-dark" src="assets/screens/medicamentos.webp" alt="Medicamentos"><img class="img-light" src="assets/screens/c-agenda.webp" alt="Agenda en modo claro"></div>
   </div>
 </section>
 
 <section id="caso">
   <div class="wrap">
     <div class="grid g2" style="align-items:center;gap:50px">
-      <div class="glow rv" style="--aura:rgba(204,255,0,.4);padding:20px"><img src="assets/illus/celebra.webp" alt="Ilustración de ciclista celebrando" style="border-radius:20px;width:100%"></div>
+      <div class="photo" style="aspect-ratio:4/5"><img src="assets/photo/manubrio.webp" alt="Manubrio de bicicleta de ruta con ciclocomputador"></div>
       <div>
-        <p class="eyebrow rv">04 · Caso de estudio</p>
-        <h2 class="rv d1">Sergio <b>Higuita</b></h2>
+        <p class="eyebrow rv">05 · Caso de estudio</p>
+        <h2>Sergio <b>Higuita</b></h2>
         <p class="rv d2">Escalador y puncher de Medellín, nacido en 1997, de 1,66 m. <span class="tag p">P</span><sup class="ref"><a href="#s7">7</a></sup> Ganó la general de la Volta a Catalunya 2022 y fue 9.º en el Tour de Suisse 2026. <span class="tag p">P</span><sup class="ref"><a href="#s7">7</a></sup></p>
-        <p class="rv d3" style="margin-top:14px">Ha pasado por cinco estructuras distintas, de Manzana Postobón a Caja Rural-Seguros RGA para 2027. <span class="tag p">P</span><sup class="ref"><a href="#s8">8</a></sup> Cada equipo tiene sus propios sistemas, así que con cada cambio parte del historial se queda atrás. <span class="tag h">H</span></p>
+        <p class="rv d3" style="margin-top:14px">Ha pasado por cinco estructuras distintas, de Manzana Postobón a Caja Rural-Seguros RGA para 2027. <span class="tag p">P</span><sup class="ref"><a href="#s8">8</a></sup> Cada equipo tiene sus propios sistemas, así que con cada cambio parte del historial se queda atrás. <span class="tag h">H</span> Por eso es el caso perfecto para probar una idea central del proyecto: <b>el dato es del ciclista, no del equipo.</b></p>
         <a class="btn ghost rv d4" style="margin-top:26px" href="/investigacion#fichas">Ver su ficha y las demás</a>
       </div>
     </div>
@@ -108,7 +155,7 @@
 <section id="mapa-sitio" style="padding-top:20px">
   <div class="wrap">
     <div class="grid g4">
-      <a href="/marca" class="card rv" style="text-decoration:none" data-hover><p class="mono">Manual</p><h3 style="margin-top:40px">Marca, Grega y color</h3></a>
+      <a href="/marca" class="card rv" style="text-decoration:none"><p class="mono">Manual</p><h3 style="margin-top:40px">Marca, Grega y color</h3></a>
       <a href="/investigacion" class="card rv d1" style="text-decoration:none"><p class="mono">Evidencia</p><h3 style="margin-top:40px">Investigación y fichas</h3></a>
       <a href="/wireframe" class="card rv d2" style="text-decoration:none"><p class="mono">Estructura</p><h3 style="margin-top:40px">Wireframe y flujos</h3></a>
       <a href="/prototipo" class="card rv d3" style="text-decoration:none;background:var(--volt);color:#0E100E"><p class="mono" style="color:#0E100E99">Alta fidelidad</p><h3 style="margin-top:40px">Prototipo navegable</h3></a>
@@ -118,12 +165,15 @@
       <ol>
         <li id="s1">Cycling Weekly. Rutina de entrenamiento de un profesional WorldTour (Harry Tanfield). <span class="tag p">P</span> El rango 25–35 h/semana viene del brief del proyecto. <span class="tag b">B</span></li>
         <li id="s2">Plasqui, G., Rietjens, G., Lambriks, L., Wouters, L., &amp; Saris, W. H. M. (2019). Energy expenditure during extreme endurance exercise: The Giro d'Italia. <i>Medicine &amp; Science in Sports &amp; Exercise</i>. <a href="https://pubmed.ncbi.nlm.nih.gov/30363009/" target="_blank" rel="noopener">PubMed 30363009</a></li>
-        <li id="s3">Keay, N., Francis, G., &amp; Hind, K. (2018). Low energy availability assessed by a sport-specific questionnaire and clinical interview indicative of bone health, endocrine profile and cycling performance in competitive male cyclists. <i>BMJ Open Sport &amp; Exercise Medicine, 4</i>(1), e000424. <a href="https://doi.org/10.1136/bmjsem-2018-000424" target="_blank" rel="noopener">doi:10.1136/bmjsem-2018-000424</a></li>
-        <li id="s4">Van Hooren, B., Cox, M., Rietjens, G., &amp; Plasqui, G. (2023). Determination of energy expenditure in professional cyclists using power data. <i>Scandinavian Journal of Medicine &amp; Science in Sports, 33</i>(4), 407–419. <a href="https://doi.org/10.1111/sms.14271" target="_blank" rel="noopener">doi:10.1111/sms.14271</a></li>
+        <li id="s3">Keay, N., Francis, G., &amp; Hind, K. (2018). Low energy availability … in competitive male cyclists. <i>BMJ Open Sport &amp; Exercise Medicine, 4</i>(1), e000424. <a href="https://doi.org/10.1136/bmjsem-2018-000424" target="_blank" rel="noopener">doi:10.1136/bmjsem-2018-000424</a></li>
+        <li id="s4">Van Hooren, B., Cox, M., Rietjens, G., &amp; Plasqui, G. (2023). Determination of energy expenditure in professional cyclists using power data. <i>Scand J Med Sci Sports, 33</i>(4), 407–419. <a href="https://doi.org/10.1111/sms.14271" target="_blank" rel="noopener">doi:10.1111/sms.14271</a></li>
         <li id="s5">Team Visma | Lease a Bike: comunicación sobre FoodCoach y su modelo de predicción del gasto; reportajes de prensa sobre Smartbase. <span class="tag p">P</span></li>
         <li id="s6">Sullivan, C., et al. (2025). Data analytics practices and reporting strategies in senior football. <i>Science and Medicine in Football</i>. Encuesta a 206 profesionales. <a href="https://www.tandfonline.com/journals/rsmf20" target="_blank" rel="noopener">Revista</a></li>
         <li id="s7">ProCyclingStats, perfil de Sergio Higuita. <a href="https://www.procyclingstats.com/rider/sergio-higuita" target="_blank" rel="noopener">procyclingstats.com</a> <span class="tag p">P</span></li>
         <li id="s8">ProCyclingUK y prensa especializada: traspaso de Higuita a Caja Rural-Seguros RGA (2027–28). <span class="tag p">P</span></li>
+        <li id="s9">Hooper, S. L., &amp; Mackinnon, L. T. (1995). Monitoring overtraining in athletes. <i>Sports Medicine, 20</i>(5), 321–327. <a href="https://doi.org/10.2165/00007256-199520050-00003" target="_blank" rel="noopener">doi:10.2165/00007256-199520050-00003</a></li>
+        <li id="s10">Mountjoy, M., et al. (2023). 2023 International Olympic Committee's consensus statement on Relative Energy Deficiency in Sport (REDs). <i>British Journal of Sports Medicine, 57</i>(17), 1073–1097. <a href="https://doi.org/10.1136/bjsports-2023-106994" target="_blank" rel="noopener">doi:10.1136/bjsports-2023-106994</a></li>
+        <li>Fotografías de ambiente: imágenes generadas para el proyecto, sin personas identificables. Pantallas e ilustraciones: diseño propio.</li>
       </ol>
     </details>
   </div>
@@ -142,10 +192,14 @@
   const set=s=>{state=s;btns.forEach(b=>b.classList.toggle('on',+b.dataset.frag===s));s?sync():scatter()};
   btns.forEach(b=>b.addEventListener('click',()=>set(+b.dataset.frag)));
   scatter();addEventListener('resize',()=>set(state));
-  new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&e.intersectionRatio>.85)setTimeout(()=>set(1),700)}),{threshold:[.85]}).observe(box);
+  // los chips se pueden arrastrar mientras están regados
+  chips.forEach(c=>{let sx,sy,ox,oy,drag=false;c.style.cursor='grab';c.addEventListener('pointerdown',e=>{if(state)return;drag=true;c.setPointerCapture(e.pointerId);const m=/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/.exec(c.style.transform);ox=+m[1];oy=+m[2];sx=e.clientX;sy=e.clientY;c.style.transition='none'});
+    c.addEventListener('pointermove',e=>{if(!drag)return;c.style.transform=`translate(${ox+e.clientX-sx}px,${oy+e.clientY-sy}px) rotate(0deg)`});
+    c.addEventListener('pointerup',()=>{drag=false;c.style.transition=''})});
+  new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&e.intersectionRatio>.85)setTimeout(()=>set(1),900)}),{threshold:[.85]}).observe(box);
 })();
 </script>
 </main><footer><div class="wrap"><div class="cols"><div><a class="brand" href="/" style="display:flex;gap:10px;align-items:center;text-decoration:none;font-family:var(--f-display);font-weight:700"><svg width="54" height="28" viewBox="4 4 136 64" aria-hidden="true"><path class="ring1" d="M36 62C50.36 62 62 50.36 62 36S50.36 10 36 10 10 21.64 10 36s11.64 26 26 26Z" fill="none" stroke="#4F534E" stroke-width="9"/><path d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="var(--bg)" stroke-width="15" class="ring2 cut"/><path class="ring2" d="M68 62C82.36 62 94 50.36 94 36S82.36 10 68 10 42 21.64 42 36s11.64 26 26 26Z" fill="none" stroke="#A9ADA6" stroke-width="9"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="var(--bg)" stroke-width="15"/><path class="ring1" d="M44.9 11.57A26 26 0 0 1 57.55 21.46" fill="none" stroke="#4F534E" stroke-width="9"/><circle class="ball" cx="100" cy="36" r="28" fill="#CCFF00" stroke="var(--bg)" stroke-width="6"/></svg><span>Peloton<b class="volt">Sync</b></span></a>
 <p style="margin-top:14px;max-width:460px">Proyecto de práctica: propuesta de innovación y prototipo navegable UX/UI de alta fidelidad. Desarrollado en el entorno de SAHG SAS y Higuita Monster, con Sergio Higuita como caso de estudio. Entrega: 16 de noviembre de 2026.</p></div>
 <div><p class="mono" style="margin-bottom:10px">Cómo leer las fuentes</p><p style="display:flex;flex-wrap:wrap;gap:6px;max-width:420px"><span class="tag f">F · científica u oficial</span><span class="tag p">P · prensa o equipo</span><span class="tag e">E · estimación</span><span class="tag b">B · contexto del proyecto</span><span class="tag h">H · hipótesis sin validar</span></p></div></div>
-<p class="mono" style="margin-top:40px">Ilustraciones, pantallas y personaje Grega: diseño propio del proyecto. Cifras de la app: datos de ejemplo. Las pruebas de usabilidad son simuladas.</p></div></footer></body></html>
+<p class="mono" style="margin-top:40px">Ilustraciones, pantallas y personaje Grega: diseño propio del proyecto. Cifras de la app: datos de ejemplo. Las pruebas de usabilidad se hicieron por recorrido cognitivo con proto-personas.</p></div></footer></body></html>
